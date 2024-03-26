@@ -34,5 +34,5 @@ TIMEZONE = os.getenv("TIMEZONE", "Europe/London")
 
 # Emails config
 EMAIL_LOGO = f"""data:image/svg+xml;base64,{
-    file_to_base64("src/static/deeployr-logo-light.svg")
+    file_to_base64("src/static/deeployr-light.svg")
 }"""
