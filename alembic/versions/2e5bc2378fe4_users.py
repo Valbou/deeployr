@@ -21,8 +21,8 @@ down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
-requesttype_enum = sa.Enum("EMAIL", "PASSWORD", name="requesttype")
-resources_enum = sa.Enum("GROUP", "ROLE", "ROLETYPE", name="resources")
+requesttype_enum = sa.Enum("RequestType.EMAIL", "RequestType.PASSWORD", name="requesttype")
+resources_enum = sa.Enum("Resources.GROUP", "Resources.ROLE", "Resources.ROLETYPE", name="resources")
 
 def upgrade() -> None:
     op.create_table(
