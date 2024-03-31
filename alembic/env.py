@@ -5,7 +5,6 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from src.libs.sqlalchemy.base import mapper_registry
 from src.libs.sqlalchemy.database import SQLService
 
 # this is the Alembic Config object, which provides
@@ -26,6 +25,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
+mapper_registry = sql_service.get_registry()
 target_metadata = mapper_registry.metadata
 
 # other values from the config, defined by the needs of env.py,
